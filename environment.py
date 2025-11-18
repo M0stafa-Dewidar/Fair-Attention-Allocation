@@ -54,140 +54,14 @@ class AllocationEnv(gym.Env):
     '''
     def __init__(self, incident_rate_by_areas, total_attention_units=100, timesteps=100):
         
+        self.incident_rate_by_areas = incident_rate_by_areas
         self.time_step = 0
         self.timesteps = timesteps
         self.total_attention_units = total_attention_units
         self.locations = self.initialize_locations_random()
 
         #Observation Space
-        observation_space = Dict({
-            "1": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "2": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "3": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "4": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "5": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "6": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "7": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "8": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "9": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "10": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "11": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "12": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "13": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "14": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "15": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "16": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "17": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "18": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "19": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "20": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-            "21": Dict({
-                "incidents": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "incident_rate": Box(low=0, high=100, shape=(), dtype=np.float32),
-                "curr_value": Box(low=0, high=1000000, shape=(), dtype=np.float32),
-                "curr_attention_units": Box(low=0, high=400, shape=(), dtype=np.float32),
-            }),
-        })
+        self.observation_space = gym.spaces.Box(low=0, high=1000000, shape=(21,3), dtype=np.float32)
 
         self.action_space = gym.spaces.Box(low=0, high=100, shape=(21,), dtype=np.float32)
 
@@ -195,8 +69,9 @@ class AllocationEnv(gym.Env):
 
     def initialize_locations_random(self):
         locations = []
-        for location in LAPD_AREA_NAMES:
-            incident_rate = np.random.poisson(np.random.uniform(low=15, high=40))
+        for i in range(len(LAPD_AREA_NAMES)):
+            location = LAPD_AREA_NAMES[i]
+            incident_rate = np.random.poisson(self.incident_rate_by_areas[i])
             curr_location_value = np.random.uniform(low=150000, high=750000)
             new_location = Location(name=location, curr_incident_rate=incident_rate, curr_value=curr_location_value)
             locations.append(new_location)
@@ -218,13 +93,13 @@ class AllocationEnv(gym.Env):
     (Dont Repeat Yourself) and makes it easier to modify the observation format later. 
     '''
     def _get_obs(self):
-        curr_map_observation = {}
-        for location in self.locations:
-            curr_map_observation[location.location_name] = {"incidents": location.curr_incidents,
-                                                   "incident_rate": location.curr_incident_rate,
-                                                   "curr_value": location.curr_value,
-                                                   "curr_attention_units":location.curr_attention}
-        return curr_map_observation
+        observation_map = np.zeros((21,3),dtype=np.float32)
+        for i in range(len(self.locations)):
+            location = self.locations[i]
+            observation_map[i,0] = location.curr_incidents
+            observation_map[i,1] = location.curr_value
+            observation_map[i,2] = location.curr_attention
+        return observation_map
 
     '''
     We can also implement a similar method for auxiliary information returned by
@@ -239,7 +114,7 @@ class AllocationEnv(gym.Env):
         Total_incidents = 0
         Highest_Discovery_Rate = 0
         Lowest_Discovery_Rate = 100
-        for i in range(len(self.locations) - 1):
+        for i in range(len(self.locations)):
             location = self.locations[i]
             Discovered += min(location.curr_attention, location.curr_incidents)
             Total_incidents += location.curr_incidents
@@ -260,7 +135,9 @@ Total Incidents:      {Total_incidents}\n\
 Highest Discovery %   {Highest_Discovery_Rate}\n\
 Lowest Discovery %    {Lowest_Discovery_Rate}\n")
                
-        return Fairness, Value, Discovered
+        return {"Fairness": Fairness,
+                "Value": Value,
+                "Discovered": Discovered}
     
 
     '''
@@ -272,7 +149,9 @@ Lowest Discovery %    {Lowest_Discovery_Rate}\n")
     '''
     def reset(self, seed: Optional[int] = None, options: Optional[dict] = None):
         # IMPORTANT: Must call this first to seed the random number generator
-        super().reset(seed=43)
+        super().reset(seed=seed)
+        self.time_step = 0
+        self.locations = self.initialize_locations_random()
         observations = self._get_obs()
         info = self._get_info()
         return observations, info
@@ -300,10 +179,10 @@ Lowest Discovery %    {Lowest_Discovery_Rate}\n")
         info = self._get_info()
 
         Utility_weight = 1
-        fairness_weight = self.total_attention_units / 2
-        reward = (Utility_weight * info[2]) - (fairness_weight * info[0])
+        fairness_weight = 0
+        reward = (Utility_weight * info["Discovered"]) - (fairness_weight * info["Fairness"])
         print(f"Current Reward:     {reward}")
-        return observations, reward, terminated, truncated
+        return observations, reward, terminated, truncated, info
 
 def main():
     TestHarness()
