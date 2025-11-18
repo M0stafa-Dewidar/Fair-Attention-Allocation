@@ -8,13 +8,36 @@ import numpy as np
 import gymnasium as gym
 import pandas as pd
 
-
+LAPD_AREA_NAMES = ["Foothill", "Hollenbeck", "Mission", "Topanga", "Harbor", "Devonshire",
+                    "West Valley", "Van Nuys", "Northeast", "West LA", "Rampart", "Wilshire",
+                      "Newton", "Southeast", "Olympic", "North Hollywood",
+                    "West Hollywood", "Southwest", "Pacific", "7th Street", "Central"]
 
 class Location():
-    def __init__(self, curr_incident_rate, curr_incidents, curr_attention, curr_value):
+    def __init__(self, name="default name", curr_incident_rate=0, curr_value=10000):
+        self.location_name = name
         self.curr_incident_rate = curr_incident_rate
-        self.curr_incidents = np.random.poisson
+        self.curr_incidents = self.produce_incidents(self.curr_incident_rate)
+        self.curr_attention = self.get_curr_attention(100) #TODO change this hardcoded value
+        self.curr_value = curr_value
 
+    def produce_incidents(self, incident_rate):
+        return np.random.poisson(incident_rate)
+    
+    def get_curr_attention(self, range):
+        return np.random.uniform(low=0, high=range)
+    
+    def set_attention(self, attention):
+        self.curr_attention = attention
+
+    def get_location_info(self):
+        print(f"\
+Location Name:         {self.location_name}\n\
+Current Incident Rate: {self.curr_incident_rate}\n\
+Current Incidents:     {self.curr_incidents}\n\
+Current Attention:     {self.curr_attention}\n\
+Current Value:         {self.curr_value}\n\
+        ")
 
 class AllocationEnv(gym.Env):
 
@@ -27,19 +50,27 @@ class AllocationEnv(gym.Env):
     def __init__(self, incident_rate_by_areas, total_attention_units=400):
         
         self.total_attention_units = total_attention_units
-        self.locations = incident_rate_by_areas
-        self.attention
+        self.locations = self.initialize_locations_random()
 
+
+    def initialize_locations_random(self):
+        locations = []
+        for location in LAPD_AREA_NAMES:
+            incident_rate = np.random.uniform(low=10, high=40)
+            curr_location_value = np.random.uniform(low=150000, high=750000)
+            new_location = Location(name=location, curr_incident_rate=incident_rate, curr_value=curr_location_value)
+            new_location.get_location_info()
+            locations.append(new_location)
         
-        pass
+        #set initial attention for new locations randomly
+        total_remaining_attention = self.total_attention_units
+        for location in locations:
+            attention_allocated = np.random.uniform(low=0, high=total_remaining_attention) #RANDOM ALLOCATION
+            location.set_attention(attention_allocated)
+            location.get_location_info()
+            total_remaining_attention -= attention_allocated
 
-
-    def get_incident_rate_by_area(self):
-        df = pd.read_csv("Crime_data_from_2020_to_Present_20251116.csv")
-        slice = df[["AREA NAME", "AREA", "DATE OCC"]]
-        incident_rate_by_areas = slice.groupby("AREA NAME").size()
-        incident_rate_by_areas /= 2145
-        return incident_rate_by_areas
+        return locations
 
     '''
     Since we need to compute observations in both Env.reset() and Env.step(),
@@ -77,3 +108,35 @@ class AllocationEnv(gym.Env):
     '''
     def step(self):
         pass
+
+
+def main():
+    TestHarness()
+
+def TestHarness():
+    # test1()
+    # test2()
+    create_env()
+
+
+'''
+Create a location object and print its state
+'''
+def test1():
+    North_Hollywood = Location(name="N Hollywood", curr_incident_rate=20)
+    North_Hollywood.get_location_info()
+
+
+def test2():
+    Center = Location(name="Center", curr_incident_rate=35)
+    Center.get_location_info()
+    Center.set_attention(attention=35)
+    Center.get_location_info()
+
+def create_env():
+    env = AllocationEnv(incident_rate_by_areas=10, total_attention_units=400)
+
+
+if __name__ == "__main__":
+    main()
+
