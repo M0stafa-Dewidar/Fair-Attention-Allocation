@@ -80,7 +80,7 @@ class AllocationEnv(gym.Env):
         total_remaining_attention = self.total_attention_units
         allocations = np.zeros(21)
         for attention_unit in range(self.total_attention_units):
-            locate_to = int(np.random.uniform(low=0, high=20)) #RANDOM ALLOCATION
+            locate_to = int(np.floor(np.random.uniform(low=0, high=20.99))) #RANDOM ALLOCATION
             allocations[locate_to] += 1
         
         for i in range(len(locations)):

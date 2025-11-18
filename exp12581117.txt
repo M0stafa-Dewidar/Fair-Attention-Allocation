@@ -1,0 +1,505 @@
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Foothill                    6                   20.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Hollenbeck                    20                   21.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Mission                    21                   20.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Topanga                    22                   24.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Harbor                    19                   30.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Devonshire                    13                   25.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Valley                    30                   27.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Van Nuys                    30                   26.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Northeast                    17                   19.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West LA                    27                   20.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Rampart                    16                   18.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Wilshire                    20                   28.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Newton                    42                   23.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southeast                    23                   28.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Olympic                    24                   25.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+North Hollywood                    24                   24.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Hollywood                    18                   19.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southwest                    27                   37.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Pacific                    35                   21.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+7th Street                    28                   23.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Central                    31                   22.0
+Current Fariness:     0.45238095238095233
+Current Value:        9091749.52927935
+Current Discovered:   431.0
+Total Incidents:      493
+Highest Discovery %   1
+Lowest Discovery %    0.5476190476190477
+
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Foothill                    14                   6.085192680358887
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Hollenbeck                    27                   20.283977508544922
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Mission                    13                   21.298173904418945
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Topanga                    12                   22.3123722076416
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Harbor                    12                   19.269777297973633
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Devonshire                    16                   13.18458366394043
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Valley                    17                   30.42596435546875
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Van Nuys                    32                   30.42596435546875
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Northeast                    24                   17.241378784179688
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West LA                    16                   27.38336753845215
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Rampart                    22                   16.22718048095703
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Wilshire                    9                   20.283977508544922
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Newton                    15                   42.59634780883789
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southeast                    15                   23.32657241821289
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Olympic                    28                   24.340770721435547
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+North Hollywood                    20                   24.340770721435547
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Hollywood                    18                   18.255578994750977
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southwest                    30                   27.38336753845215
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Pacific                    23                   35.49695587158203
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+7th Street                    28                   28.397565841674805
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Central                    31                   31.440160751342773
+Current Fariness:     0.5653433799743652
+Current Value:        10192038.380594082
+Current Discovered:   384.17242431640625
+Total Incidents:      422
+Highest Discovery %   1
+Lowest Discovery %    0.43465662002563477
+
+Current Reward:     384.16741943359375
+Fairness: 0.5653433799743652
+ Total_incidents: 422
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Foothill                    24                   25.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Hollenbeck                    20                   27.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Mission                    13                   19.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Topanga                    22                   27.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Harbor                    24                   22.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Devonshire                    22                   16.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Valley                    23                   21.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Van Nuys                    12                   27.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Northeast                    11                   30.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West LA                    29                   28.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Rampart                    28                   23.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Wilshire                    12                   21.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Newton                    20                   20.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southeast                    24                   34.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Olympic                    27                   29.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+North Hollywood                    22                   22.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Hollywood                    25                   15.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southwest                    19                   27.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Pacific                    30                   15.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+7th Street                    42                   27.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Central                    37                   25.0
+Current Fariness:     0.5
+Current Value:        8006729.827268623
+Current Discovered:   418.0
+Total Incidents:      486
+Highest Discovery %   1
+Lowest Discovery %    0.5
+
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Foothill                    14                   24.69135856628418
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Hollenbeck                    27                   20.57613182067871
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Mission                    13                   13.374485969543457
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Topanga                    12                   22.633745193481445
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Harbor                    12                   24.69135856628418
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Devonshire                    16                   22.633745193481445
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Valley                    17                   23.662551879882812
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Van Nuys                    32                   12.34567928314209
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Northeast                    24                   11.316872596740723
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West LA                    16                   29.835391998291016
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Rampart                    22                   28.806583404541016
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Wilshire                    9                   12.34567928314209
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Newton                    15                   20.57613182067871
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southeast                    15                   24.69135856628418
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Olympic                    28                   27.77777862548828
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+North Hollywood                    20                   22.633745193481445
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Hollywood                    18                   25.720163345336914
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southwest                    30                   19.547325134277344
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Pacific                    23                   30.864198684692383
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+7th Street                    28                   43.209877014160156
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Central                    31                   38.06584167480469
+Current Fariness:     0.6141974925994873
+Current Value:        10192038.380594082
+Current Discovered:   372.5638122558594
+Total Incidents:      422
+Highest Discovery %   1
+Lowest Discovery %    0.3858024775981903
+
+Current Reward:     372.5588073730469
+Fairness: 0.6141974925994873
+ Total_incidents: 422
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Foothill                    18                   15.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Hollenbeck                    15                   23.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Mission                    21                   19.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Topanga                    24                   21.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Harbor                    21                   26.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Devonshire                    27                   17.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Valley                    37                   13.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Van Nuys                    15                   24.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Northeast                    13                   24.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West LA                    15                   26.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Rampart                    22                   31.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Wilshire                    20                   28.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Newton                    18                   21.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southeast                    21                   28.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Olympic                    40                   24.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+North Hollywood                    25                   28.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Hollywood                    23                   23.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southwest                    29                   32.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Pacific                    28                   30.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+7th Street                    42                   24.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Central                    30                   23.0
+Current Fariness:     0.6486486486486487
+Current Value:        9135610.952019664
+Current Discovered:   421.0
+Total Incidents:      504
+Highest Discovery %   1
+Lowest Discovery %    0.35135135135135137
+
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Foothill                    14                   17.85714340209961
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Hollenbeck                    27                   14.880952835083008
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Mission                    13                   20.83333396911621
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Topanga                    12                   23.809524536132812
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Harbor                    12                   20.83333396911621
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Devonshire                    16                   26.785715103149414
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Valley                    17                   36.70635223388672
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Van Nuys                    32                   14.880952835083008
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Northeast                    24                   12.896825790405273
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West LA                    16                   14.880952835083008
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Rampart                    22                   21.825397491455078
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Wilshire                    9                   19.841270446777344
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Newton                    15                   17.85714340209961
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southeast                    15                   20.83333396911621
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Olympic                    28                   39.68254089355469
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+North Hollywood                    20                   24.80158805847168
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Hollywood                    18                   22.817461013793945
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southwest                    30                   28.76984214782715
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Pacific                    23                   27.77777862548828
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+7th Street                    28                   41.66666793823242
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Central                    31                   29.761905670166016
+Current Fariness:     0.534970223903656
+Current Value:        10192038.380594082
+Current Discovered:   377.8968200683594
+Total Incidents:      422
+Highest Discovery %   1
+Lowest Discovery %    0.465029776096344
+
+Current Reward:     377.8918151855469
+Fairness: 0.534970223903656
+ Total_incidents: 422
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Foothill                    11                   24.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Hollenbeck                    9                   21.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Mission                    23                   28.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Topanga                    20                   32.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Harbor                    21                   20.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Devonshire                    14                   24.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Valley                    36                   13.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Van Nuys                    26                   23.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Northeast                    27                   27.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West LA                    29                   28.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Rampart                    26                   31.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Wilshire                    20                   17.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Newton                    30                   32.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southeast                    17                   16.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Olympic                    20                   21.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+North Hollywood                    28                   19.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Hollywood                    34                   24.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southwest                    33                   18.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Pacific                    25                   28.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+7th Street                    28                   25.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Central                    29                   29.0
+Current Fariness:     0.6388888888888888
+Current Value:        9544255.993885985
+Current Discovered:   437.0
+Total Incidents:      506
+Highest Discovery %   1
+Lowest Discovery %    0.3611111111111111
+
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Foothill                    14                   10.8695650100708
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Hollenbeck                    27                   8.893280029296875
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Mission                    13                   22.72727394104004
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Topanga                    12                   19.762845993041992
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Harbor                    12                   20.750988006591797
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Devonshire                    16                   13.833992004394531
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Valley                    17                   35.5731201171875
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Van Nuys                    32                   25.691699981689453
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Northeast                    24                   26.679841995239258
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West LA                    16                   28.656126022338867
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Rampart                    22                   25.691699981689453
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Wilshire                    9                   19.762845993041992
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Newton                    15                   29.644269943237305
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southeast                    15                   16.798419952392578
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Olympic                    28                   19.762845993041992
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+North Hollywood                    20                   27.667984008789062
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Hollywood                    18                   33.596839904785156
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southwest                    30                   32.60869598388672
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Pacific                    23                   24.703556060791016
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+7th Street                    28                   27.667984008789062
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Central                    31                   28.656126022338867
+Current Fariness:     0.6706192493438721
+Current Value:        10192038.380594082
+Current Discovered:   381.37548828125
+Total Incidents:      422
+Highest Discovery %   1
+Lowest Discovery %    0.32938075065612793
+
+Current Reward:     381.3704833984375
+Fairness: 0.6706192493438721
+ Total_incidents: 422
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Foothill                    18                   28.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Hollenbeck                    13                   22.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Mission                    25                   22.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Topanga                    7                   30.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Harbor                    14                   29.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Devonshire                    18                   28.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Valley                    23                   19.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Van Nuys                    20                   28.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Northeast                    16                   32.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West LA                    21                   19.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Rampart                    23                   26.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Wilshire                    24                   21.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Newton                    30                   25.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southeast                    25                   32.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Olympic                    20                   23.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+North Hollywood                    30                   24.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Hollywood                    34                   15.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southwest                    43                   19.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Pacific                    21                   20.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+7th Street                    17                   18.0
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Central                    39                   20.0
+Current Fariness:     0.5588235294117647
+Current Value:        11004754.513806274
+Current Discovered:   395.0
+Total Incidents:      481
+Highest Discovery %   1
+Lowest Discovery %    0.4411764705882353
+
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Foothill                    14                   18.71101951599121
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Hollenbeck                    27                   13.513513565063477
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Mission                    13                   25.987525939941406
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Topanga                    12                   7.2765069007873535
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Harbor                    12                   14.553013801574707
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Devonshire                    16                   18.71101951599121
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Valley                    17                   23.908523559570312
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Van Nuys                    32                   20.790019989013672
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Northeast                    24                   16.632017135620117
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West LA                    16                   21.82952117919922
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Rampart                    22                   23.908523559570312
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Wilshire                    9                   24.94802474975586
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Newton                    15                   31.18503189086914
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southeast                    15                   25.987525939941406
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Olympic                    28                   20.790019989013672
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+North Hollywood                    20                   31.18503189086914
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+West Hollywood                    18                   35.34303665161133
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Southwest                    30                   44.698543548583984
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Pacific                    23                   21.82952117919922
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+7th Street                    28                   17.671518325805664
+LOCATION NAME           INCIDENTS_NOW           ATTENTION_NOW
+Central                    31                   40.5405387878418
+Current Fariness:     0.49949949979782104
+Current Value:        10192038.380594082
+Current Discovered:   366.50311279296875
+Total Incidents:      422
+Highest Discovery %   1
+Lowest Discovery %    0.500500500202179
+
+Current Reward:     366.49810791015625
+Fairness: 0.49949949979782104
+ Total_incidents: 422

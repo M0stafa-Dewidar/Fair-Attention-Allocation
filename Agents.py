@@ -24,7 +24,7 @@ class RL_Agent():
 
 class greedy_Agent():
 
-    def __init__(self,total_attention_units=500):
+    def __init__(self,total_attention_units=1000):
         self.env_config = Config(total_attention_units=total_attention_units, n_envs=1)
         self.env = AllocationEnv(total_attention_units=self.env_config.total_attention_units,
                                   incident_rate_by_areas=self.env_config.empirical_lambda, timesteps=5)
@@ -38,21 +38,21 @@ class greedy_Agent():
         curr_incidents = obs[:,0]
         total_attention_available = self.env.total_attention_units
         total_incidents = sum(curr_incidents)
-        print(f"total incidents: {total_incidents}")
-        print(curr_incidents)
+        # print(f"total incidents: {total_incidents}")
+        # print(curr_incidents)
         
         #allocate officers proportionally
         actions = []
         for location in curr_incidents:
             action = (location/total_incidents) * total_attention_available
-            print(f"location: {location} action{action}")
+            # print(f"location: {location} action{action}")
             actions.append(action)
         return actions
     
 
 def simulate():
     Agent = greedy_Agent()
-    config = Config(total_attention_units=500, n_envs=1)
+    config = Config(total_attention_units=1000, n_envs=1)
     env = AllocationEnv(total_attention_units=config.total_attention_units, incident_rate_by_areas=config.empirical_lambda, timesteps=5)
     done = False
     while not done:
