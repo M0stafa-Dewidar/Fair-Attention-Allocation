@@ -78,11 +78,14 @@ class AllocationEnv(gym.Env):
         
         #set initial attention for new locations randomly
         total_remaining_attention = self.total_attention_units
-        for location in locations:
-            attention_allocated = np.random.uniform(low=0, high=total_remaining_attention) #RANDOM ALLOCATION
-            location.set_attention(attention_allocated)
-            # location.get_location_info()
-            total_remaining_attention -= attention_allocated
+        allocations = np.zeros(21)
+        for attention_unit in range(self.total_attention_units):
+            locate_to = int(np.random.uniform(low=0, high=20)) #RANDOM ALLOCATION
+            allocations[locate_to] += 1
+        
+        for i in range(len(locations)):
+            location = locations[i]
+            location.set_attention(allocations[i])
 
         return locations
 
@@ -124,8 +127,12 @@ class AllocationEnv(gym.Env):
                 Highest_Discovery_Rate = coverage_rate_i
             if coverage_rate_i < Lowest_Discovery_Rate:
                 Lowest_Discovery_Rate = coverage_rate_i
-        Fairness = Highest_Discovery_Rate - Lowest_Discovery_Rate    
-        Value += self.locations[len(self.locations)-1].curr_value
+        Fairness = Highest_Discovery_Rate - Lowest_Discovery_Rate
+
+        for location in self.locations:
+            print(f"\
+{'LOCATION NAME':<10}           {'INCIDENTS_NOW':<10}           {'ATTENTION_NOW':<10}\n\
+{location.location_name}                    {location.curr_incidents}                   {location.curr_attention}")
 
         print(f"\
 Current Fariness:     {Fairness}\n\
@@ -137,7 +144,8 @@ Lowest Discovery %    {Lowest_Discovery_Rate}\n")
                
         return {"Fairness": Fairness,
                 "Value": Value,
-                "Discovered": Discovered}
+                "Discovered": Discovered,
+                "Total_incidents": Total_incidents}
     
 
     '''
@@ -168,6 +176,7 @@ Lowest Discovery %    {Lowest_Discovery_Rate}\n")
             curr_location = self.locations[i]
             curr_location.curr_attention = curr_action
             self.locations[i] = curr_location
+            self.locations[i].curr_attention = curr_action
         
         self.time_step += 1
 
@@ -180,7 +189,7 @@ Lowest Discovery %    {Lowest_Discovery_Rate}\n")
 
         Utility_weight = 1
         fairness_weight = 0
-        reward = (Utility_weight * info["Discovered"]) - (fairness_weight * info["Fairness"])
+        reward = (Utility_weight * info["Discovered"]) - (fairness_weight * info["Fairness"]) - (0.00000999 * self.total_attention_units)
         print(f"Current Reward:     {reward}")
         return observations, reward, terminated, truncated, info
 

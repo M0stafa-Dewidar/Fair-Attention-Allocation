@@ -28,6 +28,7 @@ def main():
 
     env = AllocationEnv(incident_rate_by_areas = expirement_config.empirical_lambda, total_attention_units=expirement_config.total_attention_units)
     obs, info = env.reset()
+    
     done = False
 
     #Simulate?
