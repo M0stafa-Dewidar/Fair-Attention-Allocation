@@ -9,6 +9,8 @@ import gymnasium as gym
 import pandas as pd
 from gymnasium.spaces import Dict, Box, Discrete
 import matplotlib.pyplot as plt
+from scipy.special import softmax
+import torch
 
 LAPD_AREA_NAMES = ["Foothill", "Hollenbeck", "Mission", "Topanga", "Harbor", "Devonshire",
                     "West Valley", "Van Nuys", "Northeast", "West LA", "Rampart", "Wilshire",
@@ -61,9 +63,9 @@ class AllocationEnv(gym.Env):
         self.locations = self.initialize_locations_random()
 
         #Observation Space
-        self.observation_space = gym.spaces.Box(low=0, high=1000000, shape=(21,3), dtype=np.float32)
+        self.observation_space = gym.spaces.Box(low=0, high=self.total_attention_units, shape=(21,), dtype=np.float32)
 
-        self.action_space = gym.spaces.Box(low=0, high=100, shape=(21,), dtype=np.float32)
+        self.action_space = gym.spaces.Box(low=0, high=1, shape=(21,), dtype=np.float32)
 
 
 
@@ -96,12 +98,13 @@ class AllocationEnv(gym.Env):
     (Dont Repeat Yourself) and makes it easier to modify the observation format later. 
     '''
     def _get_obs(self):
-        observation_map = np.zeros((21,3),dtype=np.float32)
+        observation_map = np.zeros((21,),dtype=np.float32)
         for i in range(len(self.locations)):
             location = self.locations[i]
-            observation_map[i,0] = location.curr_incidents
-            observation_map[i,1] = location.curr_value
-            observation_map[i,2] = location.curr_attention
+            observation_map[i] = location.curr_incidents
+            # observation_map[i,1] = location.curr_value
+            # observation_map[i,2] = location.curr_attention
+        print(observation_map)
         return observation_map
 
     '''
@@ -109,7 +112,7 @@ class AllocationEnv(gym.Env):
     Env.reset() and Env.step(). this can be useful for debugging and understanding
     agent progress, but shouldnt be used by the learning algorithm itself.
     '''
-    def _get_info(self):
+    def _get_info(self, verbose=1):
         #Compute the Value and fairness metrics
         Value = 0
         Fairness = 0
@@ -117,24 +120,27 @@ class AllocationEnv(gym.Env):
         Total_incidents = 0
         Highest_Discovery_Rate = 0
         Lowest_Discovery_Rate = 100
+        coverage_rate_arr = []
         for i in range(len(self.locations)):
             location = self.locations[i]
             Discovered += min(location.curr_attention, location.curr_incidents)
             Total_incidents += location.curr_incidents
             Value += location.curr_value
-            coverage_rate_i = min(location.curr_attention / location.curr_incidents,1)
+            coverage_rate_i = min(location.curr_attention / (location.curr_incidents + 0.0000001),1)
+            coverage_rate_arr.append(coverage_rate_i)
             if coverage_rate_i > Highest_Discovery_Rate:
                 Highest_Discovery_Rate = coverage_rate_i
             if coverage_rate_i < Lowest_Discovery_Rate:
                 Lowest_Discovery_Rate = coverage_rate_i
         Fairness = Highest_Discovery_Rate - Lowest_Discovery_Rate
-
-        for location in self.locations:
+        if verbose:
             print(f"\
-{'LOCATION NAME':<10}           {'INCIDENTS_NOW':<10}           {'ATTENTION_NOW':<10}\n\
-{location.location_name}                    {location.curr_incidents}                   {location.curr_attention}")
+{'LOCATION NAME':<17}           {'INCIDENTS_NOW':<17}           {'ATTENTION_NOW':<17}\n")
+            for location in self.locations:
+                print(f"\
+{location.location_name:<17}                    {location.curr_incidents:<17}                   {location.curr_attention:<17}")
 
-        print(f"\
+            print(f"\
 Current Fariness:     {Fairness}\n\
 Current Value:        {Value}\n\
 Current Discovered:   {Discovered}\n\
@@ -145,7 +151,8 @@ Lowest Discovery %    {Lowest_Discovery_Rate}\n")
         return {"Fairness": Fairness,
                 "Value": Value,
                 "Discovered": Discovered,
-                "Total_incidents": Total_incidents}
+                "Total_incidents": Total_incidents,
+                "coverage_rate_array": coverage_rate_arr}
     
 
     '''
@@ -158,8 +165,8 @@ Lowest Discovery %    {Lowest_Discovery_Rate}\n")
     def reset(self, seed: Optional[int] = None, options: Optional[dict] = None):
         # IMPORTANT: Must call this first to seed the random number generator
         super().reset(seed=seed)
-        self.time_step = 0
-        self.locations = self.initialize_locations_random()
+        # self.time_step = 0
+        # self.locations = self.initialize_locations_random()
         observations = self._get_obs()
         info = self._get_info()
         return observations, info
@@ -171,8 +178,15 @@ Lowest Discovery %    {Lowest_Discovery_Rate}\n")
     This is where the world rules, and reward logic live 
     '''
     def step(self, actions):
-        for i in range(len(actions)):
-            curr_action = actions[i]
+        # allocations = actions
+        # total_action_norm = sum(actions)
+        # m = torch.nn.Softmax()
+        print(f"actions:    {actions}")
+        action_probs = actions
+        # scaled_actions = actions / total_action_norm * self.total_attention_units
+        for i in range(len(action_probs)):
+            # print(f"i:    {i}")
+            curr_action = action_probs[i] * self.total_attention_units
             curr_location = self.locations[i]
             curr_location.curr_attention = curr_action
             self.locations[i] = curr_location
@@ -187,9 +201,48 @@ Lowest Discovery %    {Lowest_Discovery_Rate}\n")
         observations = self._get_obs()
         info = self._get_info()
 
+        # coverage_arr_np = info["coverage_rate_arr"]
+        # print(type(coverage_arr_np[0]))
+        # coverage_arr_np = torch.tensor(coverage_arr_np)
+
+        # safety_std_dev = torch.std(coverage_arr_np)
+        # safety_mean = torch.mean(coverage_arr_np)
+        safety_threshold = 0.8
+
+        for location in self.locations:
+            location.curr_incidents = location.produce_incidents(location.curr_incident_rate)
+            # location.curr_value = min(location.curr_value - 0.1 * location.curr_value * (safety_mean - (max(1,location.curr_attention / location.curr_incidents))) / safety_std_dev,1000000)
+            if location.curr_attention / location.curr_incidents < safety_threshold:
+                self.total_attention_units = self.total_attention_units - (0.01 * (location.curr_value / 200000))
+            else:
+                self.total_attention_units = self.total_attention_units + (0.01 * (location.curr_value / 200000))
+            self.total_attention_units = min(600,max(200, self.total_attention_units))
+
+
+        
+        # new_total_attention = 0
+        # Cost = 35000
+        # for location in self.locations:
+            # new_total_attention += (location.curr_value / Cost)
+        
+        # print("NEW ATTENTION TOTAL")
+        # print(new_total_attention)
+        # 
+        # self.total_attention_units = new_total_attention
+
+        penalty = 0
+        for loc in self.locations:
+            missed = max(0, loc.curr_incidents - loc.curr_attention)
+            # Squaring the missed incidents makes big failures hurt MUCH more
+        penalty -= (missed ** 2)
+        
         Utility_weight = 1
         fairness_weight = 0
-        reward = (Utility_weight * info["Discovered"]) - (fairness_weight * info["Fairness"]) - (0.00000999 * self.total_attention_units)
+        penalty_weight = 0
+
+        # loc0_attention = self.locations[0].curr_attention
+        # reward = 100 * loc0_attention - (self.total_attention_units - loc0_attention)
+        reward = (Utility_weight * info["Discovered"] / info["Total_incidents"]) - (fairness_weight * info["Fairness"]) + penalty_weight * penalty
         print(f"Current Reward:     {reward}")
         return observations, reward, terminated, truncated, info
 
