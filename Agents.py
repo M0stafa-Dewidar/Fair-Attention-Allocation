@@ -9,7 +9,7 @@ from torch import nn
 from torchvision.transforms import ToTensor
 import matplotlib.pyplot as plt
 
-
+  
 LAPD_AREA_NAMES = ["Foothill", "Hollenbeck", "Mission", "Topanga", "Harbor", "Devonshire",
                     "West Valley", "Van Nuys", "Northeast", "West LA", "Rampart", "Wilshire",
                       "Newton", "Southeast", "Olympic", "North Hollywood",
